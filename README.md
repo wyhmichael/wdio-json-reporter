@@ -1,23 +1,16 @@
-WDIO JSON Reporter
+Fork of WDIO JSON Reporter with dependencies updated
 ===================
 
-> A WebdriverIO plugin. Report results in json format.
+> A WebdriverIO plugin. Report results in json format. With updates to WDIO@v7
 
 
 ## WDIO Version Compatibility
 
-There are breaking changes between WDIO v4 and v5 with how custom reporters work.  The chart below shows the versions of this reporter and their WDIO compatibility version.
+This package is only made for wdio@v7, please see https://github.com/fijijavis/wdio-json-reporter/ for compatibility with other wdio versions
 
 | WDIO Json Reporter | WDIO |
 | ------------------ | ---- |
-| ^0.4.0             | v4   |
-| ^1.0.0             | v5   |
-| ^2.0.0             | v6   |
 | ^3.0.0             | v7   |
-
-
-
-# WDIO v5 Compatibility
 
 ## Installation
 
@@ -65,7 +58,7 @@ reporters: [
 ```
 
 ## Result Files
-With WDIO v5, reporting has moved from a centralized process to one that is handled by each of the "sessions" spun up for parallel test execution.
+Starting with WDIO v5, reporting has moved from a centralized process to one that is handled by each of the "sessions" spun up for parallel test execution.
 This change helped reduce the amount of chatter during WDIO test execution and thus improved performance.  The downside is we are no longer able
 to get a single report for ALL test execution.  Consider the following:
 
@@ -83,7 +76,7 @@ const mergeResults = require('wdio-json-reporter/mergeResults')
 mergeResults('./Results', 'wdio-json-*', 'wdio-custom-filename.json')
 ```
 
-*Note:* `wdio-custom-filename.json` is optional, is the parameter is not provided the default value is `wdio-merged.json`
+*Note:* `wdio-custom-filename.json` is optional, if the parameter is not provided the default value is `wdio-merged.json`
 
 2) Call node script from command line and pass 2 arguments
 
@@ -107,20 +100,6 @@ onComplete: function (exitCode, config, capabilities, results) {
 
 Upon completion, the merge script will output a single json file named `wdio-merged.json` in the provided <RESULTS_DIR>
 
-
-# WDIO v4 Compatibility
-
-## Installation
-
-* NPM
-```bash
-npm install wdio-json-reporter@^0.4.0 --save-dev
-```
-
-* Yarn
-```bash
-yarn add wdio-json-reporter@^0.4.0 --dev
-```
 
 ## Configuration
 
@@ -197,7 +176,5 @@ module.exports = {
   // ...
 };
 ```
-
-
 
 For more information on WebdriverIO see the [homepage](http://webdriver.io).
