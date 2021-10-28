@@ -3,10 +3,11 @@ Fork of WDIO JSON Reporter with dependencies updated
 
 > A WebdriverIO plugin. Report results in json format. With updates to WDIO@v7
 
-
 ## WDIO Version Compatibility
 
 This package is only made for wdio@v7, please see https://github.com/fijijavis/wdio-json-reporter/ for compatibility with other wdio versions
+
+*Note:* the changes from this fork are also made or going to be made back to https://github.com/fijijavis/wdio-json-reporter/, I recommend to use https://github.com/fijijavis/wdio-json-reporter/ first
 
 | WDIO Json Reporter | WDIO |
 | ------------------ | ---- |
@@ -30,7 +31,7 @@ yarn add wdio-json-reporter --dev
 ```js
 reporters: [
   'dot',
-  ['json',{ stdout: true }]
+  ['@wyh.michael/wdio-json-reporter',{ stdout: true }]
 ],
 ```
 
@@ -38,7 +39,7 @@ reporters: [
 ```js
 reporters: [
   'dot',
-  ['json',{
+  ['@wyh.michael/wdio-json-reporter',{
       outputDir: './Results'
   }]
 ],
@@ -48,7 +49,7 @@ reporters: [
 ```js
 reporters: [
   'dot',
-  ['json',{
+  ['@wyh.michael/wdio-json-reporter',{
     outputDir: './Results',
     outputFileFormat: function(opts) {
         return `results-${opts.cid}.${opts.capabilities}.json`
@@ -111,7 +112,7 @@ to the array. To get some output during the test you can run the [WDIO Dot Repor
 // wdio.conf.js
 module.exports = {
   // ...
-  reporters: ['dot', 'json'],
+  reporters: ['dot', '@wyh.michael/wdio-json-reporter'],
   reporterOptions: {
     outputDir: './Results'
   },
@@ -125,7 +126,7 @@ module.exports = {
 // wdio.conf.js
 module.exports = {
   // ...
-  reporters: ['dot', 'json'],
+  reporters: ['dot', '@wyh.michael/wdio-json-reporter'],
   reporterOptions: {
     outputDir: './',
     combined: true
@@ -140,7 +141,7 @@ module.exports = {
 // wdio.conf.js
 module.exports = {
   // ...
-  reporters: ['dot', 'json'],
+  reporters: ['dot', '@wyh.michael/wdio-json-reporter'],
   reporterOptions: {
     outputDir: './',
     filename: 'wdio-results'
@@ -155,7 +156,7 @@ module.exports = {
 // wdio.conf.js
 module.exports = {
   // ...
-  reporters: ['json'],
+  reporters: ['@wyh.michael/wdio-json-reporter'],
   reporterOptions: {
     useStdout: true
   },
@@ -169,7 +170,7 @@ If you do not want to print out the mocha epilogue (i.e. `1 passing (5.2s)`), yo
 // wdio.conf.js
 module.exports = {
   // ...
-  reporters: ['json'],
+  reporters: ['@wyh.michael/wdio-json-reporter'],
   reporterOptions: {
     suppressEpilogue: true
   },
