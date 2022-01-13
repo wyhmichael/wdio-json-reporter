@@ -1,6 +1,6 @@
 {
   "name": "@wyh.michael/wdio-json-reporter",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A fork of https://github.com/fijijavis/wdio-json-reporter with dependencies updated including wido@v7",
   "main": "./src/index.js",
   "files": [
@@ -30,16 +30,16 @@
   },
   "homepage": "https://github.com/wyhmichael/wdio-json-reporter/#readme",
   "dependencies": {
-    "@wdio/reporter": "^7.16.3",
-    "jest-matcher-utils": "^27.3.1"
+    "@wdio/reporter": "~7.16.13",
+    "jest-matcher-utils": "~27.4.6"
   },
   "devDependencies": {
-    "eslint": "~8.1.0",
+    "eslint": "~8.6.0",
     "eslint-config-standard": "~16.0.3",
-    "eslint-plugin-import": "~2.25.2",
+    "eslint-plugin-import": "~2.25.4",
     "eslint-plugin-node": "~11.1.0",
-    "eslint-plugin-promise": "~5.1.1",
-    "jest": "~27.3.1"
+    "eslint-plugin-promise": "~6.0.0",
+    "jest": "~27.4.7"
   },
   "resolutions": {
     "braces": "~3.0.2",
@@ -49,7 +49,7 @@
     "wyh.michael"
   ],
   "peerDependencies": {
-    "@wdio/cli": "^7.16.3"
+    "@wdio/cli": "~7.16.13"
   },
   "jest": {
     "testPathIgnorePatterns": [

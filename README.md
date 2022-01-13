@@ -17,12 +17,12 @@ This package is only made for wdio@v7, please see https://github.com/fijijavis/w
 
 * NPM
 ```bash
-npm install wdio-json-reporter --save-dev
+npm install @wyh.michael/wdio-json-reporter --save-dev
 ```
 
 * Yarn
 ```bash
-yarn add wdio-json-reporter --dev
+yarn add @wyh.michael/wdio-json-reporter --dev
 ```
 
 ## Configuration
