@@ -1,6 +1,6 @@
 {
   "name": "@wyh.michael/wdio-json-reporter",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "description": "A fork of https://github.com/fijijavis/wdio-json-reporter with dependencies updated including wido@v7",
   "main": "./src/index.js",
   "files": [
